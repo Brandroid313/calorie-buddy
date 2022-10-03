@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+ <head>
+    <title>List of Foods</title>
+ </head>
+  <div class="topnav">
+            <a href="/topic7/mid-term/">Home</a>
+            <a href="/topic7/mid-term/about">About</a>
+            <a href="/topic7/mid-term/addFood">Add Food</a>
+            <a href="/topic7/mid-term/listFood">Food List</a>
+            <a href="/topic7/mid-term/searchFood">Search Foods</a>
+            <a href="/topic7/mid-term/updateFood">Update Foods</a>
+ </div>
+ <body>
+    <h1> This is List Food Page </h1>
+
+ <!-- <ul>
+    <% availableFood.forEach(function(food){ %>
+    <li><%= food.name %>, <%= food.calories %> calories, per <%= food.value_per_unit %>, <%= food.unit_of_value %>, carbs <%= food.carbs %>, fat <%= food.fat %>, protein <%= food.protein %>, salt <%= food.salt %>, sugar <%= food.sugar %>  </li>
+    <% }) %>
+ </ul> -->
+
+ <div class="table-data">
+   <h2>Food in our Database </h2>
+       <table border="1">
+           <tr>
+               <th>Food Name</th>
+               <th>Calories</th>
+               <th>Typical Value per Unit</th>
+               <th>Unit</th>
+               <th>Carbs</th>
+               <th>Fat</th>
+               <th>Protein</th>
+               <th>Salt</th>
+               <th>Sugar</th>
+           </tr>
+           
+           <%
+           availableFood.forEach(function(food){
+           %>
+           <tr>
+               <td><%=food.name %></td>
+               <td><%=food.calories %></td>
+               <td><%=food.value_per_unit %></td>
+               <td><%=food.unit_of_value %></td>
+               <td><%=food.carbs %></td>
+               <td><%=food.fat %></td>
+               <td><%=food.protein %></td>
+               <td><%=food.salt %></td>
+               <td><%=food.sugar %></td>
+               <td><a href="/topic7/mid-term/delete/<%=food.id%>" onclick="myFunction()" >Delete</a></td>
+               <!-- Script to Display Food has been removed -->
+                <script>
+                    function myFunction() {
+                        alert("Food removed to Database!");
+                    } 
+                </script>
+               </td>
+           </tr>
+           <% }) %>
+       </table>
+       </div>
+ </body>
+ </html>

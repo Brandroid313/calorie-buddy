@@ -1,0 +1,44 @@
+<!doctype html>
+    <html>
+        <head>
+            <title>Add Food</title>
+        </head>
+         <div class="topnav">
+            <a href="/topic7/mid-term/">Home</a>
+            <a href="/topic7/mid-term/about">About</a>
+            <a href="/topic7/mid-term/addFood">Add Food</a>
+            <a href="/topic7/mid-term/listFood">Food List</a>
+            <a href="/topic7/mid-term/searchFood">Search Foods</a>
+            <a href="/topic7/mid-term/updateFood">Update Foods</a>
+        </div>
+        <body>
+            <h1> This is the Add Food Page!!!! </h1>
+            <p>Fill in the form to add a food to our database.</p>
+            <form method="POST" action="/topic7/mid-term/foodadded">
+               <label>Food Name</label> <br>
+               <input id="name" type="text" name="name" value="Food Name" /> <br>
+               <label> Calories</label> <br> 
+               <input id="calories" type="number" name="calories" step="0.01" min="0" value="0"/> <br>
+               <label> Carbs</label> <br> 
+               <input id="carbs" type="number" name="carbs" step="0.01" min="0" value="0"/> <br>
+               <label> Typical Values per Unit</label> <br> 
+               <input id="value_per_unit" type="number" name="value_per_unit" step="0.01" min="0" value="100"/> <br>
+               <label> Unit Type</label> <br> 
+               <input id="unit_of_value" type="text" name="unit_of_value" value="grams" /> <br>
+               <label> Fat</label> <br> 
+               <input id="fat" type="number" name="fat" step="0.01" min="0" value="0"/> <br>
+               <label> Protein</label> <br>
+               <input id="protein" type="number" name="protein" step="0.01" min="0" value="0"/> <br>
+               <label> Salt</label> <br> 
+               <input id="salt" type="number" name="salt" step="0.01" min="0" value="0"/> <br>
+               <label> Sugar</label> <br> 
+               <input id="sugar" type="number" name="sugar" step="0.01" min="0" value="0"/> <br>
+               <button type="submit" value="Submit" onclick="myFunction()">Submit Button</button>
+               <script>
+                function myFunction() {
+                    alert("Food added to Database!");
+                }
+                </script>
+            </form>
+        </body>
+    </html>
